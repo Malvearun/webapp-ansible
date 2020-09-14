@@ -1,6 +1,8 @@
 # webapp-ansible
 
-This is a simple web application using Python Flask and MySQL database. This is used in the demonstration of development of Ansible Playbooks.
+## Step 1: Manuall setup through command line.
+
+web application using Python Flask and MySQL database, development of Ansible Playbooks.
 
 Below are the steps required to get this working on a base linux system.
 
@@ -60,6 +62,23 @@ FLASK_APP=app.py flask run --host=0.0.0.0
 6. Test
 
 Open a browser and go to URL
+
+http://<IP>:5000                            => Welcome
+http://<IP>:5000/how%20are%20you            => I am good, how about you?
+http://<IP>:5000/read%20from%20database     => JOHN
+    
+    
+    ## step 2: Through Ansible playbook
+    
+    * Create a folder and move the files run `mkdir ansible` and move inside the folder run `cd ansible`.
+    
+     *clone the git hub link to a folder: https://github.com/Malvearun/webapp-ansible.git
+    
+     * run `ansible-playbook playbook.yaml -i inventory.txt`
+    
+ • Test
+
+1. Open a browser and go to URL
 
 http://<IP>:5000                            => Welcome
 http://<IP>:5000/how%20are%20you            => I am good, how about you?
